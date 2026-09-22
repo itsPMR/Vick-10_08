@@ -2,126 +2,587 @@
 <html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#4a0f22" />
-    <meta name="description" content="Um cantinho especial feito com carinho para a Vitória." />
-    <title>Para Vitória, com amor ♥</title>
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta name="theme-color" content="#260e17" />
+    <meta
+      name="description"
+      content="Para Vitória. Um lugar para guardar o que sinto, as palavras que ficam e um coração todinho seu. Feito por PMR."
+    />
+    <title>Vitória — sempre você. ♥</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link
+      rel="preload"
+      href="assets/fonts/cormorant-garamond-latin-normal.woff2"
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
     <link rel="stylesheet" href="styles.css" />
     <script src="script.js" defer></script>
   </head>
   <body>
-    <main>
-      <div class="ambient ambient-one" aria-hidden="true"></div>
-      <div class="ambient ambient-two" aria-hidden="true"></div>
+    <a class="skip-link" href="#inicio">Pular para o conteúdo</a>
+    <dialog
+      id="intro"
+      class="intro-screen"
+      aria-labelledby="intro-title"
+      aria-describedby="intro-description"
+    >
+      <div class="intro-top">
+        <span class="eyebrow">de PMR, com amor</span
+        ><button type="button" id="skip-intro" class="text-button">
+          pular abertura <span aria-hidden="true">↗</span>
+        </button>
+      </div>
+      <div class="intro-content">
+        <p class="intro-kicker eyebrow">um cantinho só nosso</p>
+        <h2 id="intro-title">Vitória.</h2>
+        <p id="intro-description">eu fiz uma coisinha pra você.</p>
+        <span class="intro-heart" aria-hidden="true">♡</span>
+        <button id="enter" class="intro-enter" type="button">
+          entrar <span aria-hidden="true">♡</span>
+        </button>
+      </div>
+      <div class="intro-bottom">
+        <button
+          id="motion-toggle"
+          class="text-button"
+          type="button"
+          aria-pressed="false"
+          hidden
+        >
+          ver com animações
+        </button>
+        <p class="eyebrow">pode entrar. aqui, tudo é seu.</p>
+      </div>
+    </dialog>
 
-      <nav class="nav" aria-label="Navegação principal">
-        <a class="brand" href="#inicio" aria-label="Voltar ao início">V<span>♥</span></a>
-        <a class="nav-link" href="#cartinha">Uma cartinha para você <span aria-hidden="true">↘</span></a>
-      </nav>
-
-      <section class="hero" id="inicio">
-        <div class="hero-copy">
-          <p class="eyebrow"><span></span> Uma pequena surpresa para a pessoa mais especial</p>
-          <h1>Vitória,<em>meu lugar favorito</em>é ao seu lado.</h1>
-          <p class="intro">
-            Fiz este cantinho só para te lembrar de uma coisa que talvez eu nunca
-            consiga dizer o suficiente: você é muito amada.
-          </p>
-          <div class="hero-actions">
-            <a class="button button-primary" href="#cartinha">Abrir meu coração <span aria-hidden="true">♥</span></a>
-            <button class="text-button" id="spread-love" type="button">Espalhar amor <span aria-hidden="true">✦</span></button>
-          </div>
-        </div>
-
-        <div class="love-note" aria-label="Bilhete romântico">
-          <div class="note-pin" aria-hidden="true">♥</div>
-          <p>Para a minha pessoa preferida,</p>
-          <strong>em todos os meus dias.</strong>
-          <span>— com todo o meu amor</span>
-          <div class="note-doodle" aria-hidden="true">♡</div>
-        </div>
-
-        <div class="heart-burst" id="heart-burst" aria-hidden="true">
-          <span>♡</span><span>♥</span><span>♡</span><span>♥</span><span>♡</span>
-          <span>♥</span><span>♡</span><span>♥</span><span>♡</span>
-        </div>
-        <p class="scroll-hint" aria-hidden="true">role para descobrir <span>↓</span></p>
-      </section>
-
-      <section class="reasons" aria-labelledby="reasons-title">
-        <div class="section-heading">
-          <p class="eyebrow"><span></span> Só para deixar registrado</p>
-          <h2 id="reasons-title">Algumas das infinitas coisas que eu amo em você.</h2>
-        </div>
-        <div class="reason-grid">
-          <article class="reason-card">
-            <span class="card-number">01</span>
-            <div class="card-heart" aria-hidden="true">♡</div>
-            <h3>Seu sorriso</h3>
-            <p>Porque ele tem esse jeitinho de transformar qualquer dia comum em um dia especial.</p>
-          </article>
-          <article class="reason-card">
-            <span class="card-number">02</span>
-            <div class="card-heart" aria-hidden="true">♡</div>
-            <h3>Seu jeito</h3>
-            <p>Porque ser você é o que faz tudo ao seu redor ficar mais bonito, leve e cheio de vida.</p>
-          </article>
-          <article class="reason-card">
-            <span class="card-number">03</span>
-            <div class="card-heart" aria-hidden="true">♡</div>
-            <h3>A nossa história</h3>
-            <p>Porque cada momento ao seu lado é uma lembrança que eu quero guardar para sempre.</p>
-          </article>
-        </div>
-      </section>
-
-      <section class="letter-section" id="cartinha" aria-labelledby="letter-title">
-        <div class="letter-intro">
-          <p class="eyebrow"><span></span> Leia quando quiser sorrir</p>
-          <h2 id="letter-title">Tem uma mensagem guardada aqui.</h2>
-          <p>Ela é simples, mas é inteiramente sua.</p>
-        </div>
-
-        <div class="envelope-wrap" id="envelope-wrap">
-          <div class="letter" id="letter" aria-hidden="true">
-            <p class="letter-date">Para Vitória, hoje e sempre.</p>
-            <h3>Meu amor,</h3>
-            <p>
-              Talvez esta página seja pequena demais para tudo o que você significa
-              para mim. Ainda assim, eu queria criar um lugar onde cada detalhe
-              dissesse um pouquinho do que sinto por você.
+    <div id="page-content">
+      <header class="site-header wrap">
+        <a
+          class="brand"
+          id="brand"
+          href="#inicio"
+          aria-label="V coração — voltar ao início"
+          >V<span aria-hidden="true">♥</span></a
+        >
+        <span class="header-dedication">para a minha pessoa preferida</span>
+        <nav aria-label="Navegação principal">
+          <a href="#memorias">nós dois</a
+          ><a href="#cartinha"
+            >sua cartinha <span aria-hidden="true">↗</span></a
+          >
+        </nav>
+      </header>
+      <main>
+        <section
+          class="hero wrap"
+          id="inicio"
+          aria-labelledby="hero-title"
+          tabindex="-1"
+        >
+          <div class="hero-copy">
+            <p class="eyebrow hero-kicker">
+              <span class="tiny-star" aria-hidden="true">✳</span> uma pequena
+              surpresa. um amor imenso.
             </p>
-            <p>
-              Obrigado por existir do seu jeito, por dividir a vida comigo e por
-              fazer meu coração se sentir em casa. Que a gente continue escolhendo
-              um ao outro — nos dias fáceis, nos difíceis e em todos os que ainda
-              vamos viver.
+            <h1 id="hero-title">
+              <span class="line"><span>Vitória,</span></span>
+              <span class="line"><span>meu lugar</span></span>
+              <span class="line italic"><span>favorito é</span></span>
+              <span class="line"><span>ao seu lado.</span></span>
+            </h1>
+            <p class="hero-description">
+              Fiz este cantinho só para te lembrar de uma coisa que talvez eu
+              nunca consiga dizer o suficiente:
+              <strong>você é muito amada.</strong>
             </p>
-            <p class="letter-signature">Com amor, sempre seu. ♥</p>
+            <div class="hero-actions">
+              <a class="button primary" href="#cartinha"
+                >Abrir meu coração <span aria-hidden="true">↗</span></a
+              ><button
+                class="text-button"
+                id="spread-love"
+                type="button"
+                hidden
+              >
+                Espalhar amor <span aria-hidden="true">♡</span>
+              </button>
+            </div>
+            <p id="love-status" class="sr-only" role="status"></p>
           </div>
-          <div class="envelope" aria-hidden="true">
-            <div class="envelope-flap"></div>
-            <div class="envelope-front"></div>
-            <span class="seal">V</span>
+          <div
+            class="correspondence"
+            role="group"
+            aria-label="Um bilhete para você"
+          >
+            <div class="back-paper" aria-hidden="true">
+              <span>há tanto de você<br />em tudo que eu sou.</span>
+            </div>
+            <article class="love-note">
+              <div class="note-top">
+                <span class="eyebrow">entrega especial</span
+                ><span class="postage" aria-hidden="true"
+                  >♡<small>COM AMOR</small></span
+                >
+              </div>
+              <p class="note-address">Para a minha<br />pessoa preferida,</p>
+              <p class="note-main">em todos<br />os meus <em>dias.</em></p>
+              <div class="note-bottom">
+                <span>— com todo o meu amor</span
+                ><span class="signature">PMR</span>
+              </div>
+              <svg
+                class="note-flower"
+                aria-hidden="true"
+                viewBox="0 0 120 150"
+                fill="none"
+              >
+                <path
+                  d="M62 145C48 113 58 93 60 63M58 109C26 106 26 87 20 83C43 79 56 95 58 109ZM57 99C83 101 100 81 97 74C76 74 63 82 57 99ZM60 65C26 77 13 48 39 43C15 19 52 8 58 34C70 5 95 18 82 42C111 39 107 70 79 63C72 90 48 86 60 65Z"
+                  stroke="currentColor"
+                  stroke-width="1.2"
+                />
+                <circle cx="64" cy="51" r="9" stroke="currentColor" />
+              </svg>
+            </article>
+            <span class="paper-caption"
+              >um pedacinho do que sinto, em papel.</span
+            >
+            <span class="hero-orbit" aria-hidden="true"></span>
           </div>
-          <button class="button button-letter" id="letter-button" type="button" aria-expanded="false">
-            <span class="button-label">Abrir a cartinha</span><span aria-hidden="true" class="button-icon">♥</span>
-          </button>
-        </div>
-      </section>
+          <div class="hero-foot">
+            <a href="#memorias"
+              >role devagar. sinta com calma.
+              <span aria-hidden="true">↓</span></a
+            ><button id="replay-entry" class="text-button" type="button" hidden>
+              ver abertura <span aria-hidden="true">↺</span>
+            </button>
+          </div>
+        </section>
 
-      <section class="promise" aria-label="Uma promessa">
-        <p>Hoje</p><span aria-hidden="true">✦</span><p>Amanhã</p><span aria-hidden="true">✦</span><p>Sempre</p>
-      </section>
+        <section
+          id="memorias"
+          class="memories paper-section"
+          aria-labelledby="memories-title"
+        >
+          <div class="wrap">
+            <div class="chapter-heading">
+              <p class="eyebrow">02 / o que a gente guarda</p>
+              <span class="chapter-note">algumas palavras merecem ficar.</span>
+            </div>
+            <div class="memories-heading">
+              <h2 id="memories-title">
+                A nossa história,<br /><em>meu lugar de voltar.</em>
+              </h2>
+              <p>
+                Cada momento ao seu lado é uma lembrança que eu quero guardar
+                para sempre.
+              </p>
+            </div>
+            <div class="memory-table">
+              <div class="memory-side memory-side-left">
+                <span class="eyebrow">um lembrete</span>
+                <p>
+                  você faz meu<br />coração se sentir<br /><em>em casa.</em>
+                </p>
+                <span class="small-doodle" aria-hidden="true">♡</span>
+              </div>
+              <figure class="memory-main">
+                <span class="paper-tape" aria-hidden="true"></span
+                ><span class="eyebrow">das coisas que ficam</span>
+                <blockquote>
+                  algumas coisas eu queria<br />poder viver <em>duas vezes.</em
+                  ><br /><span
+                    >só para sentir pela<br />primeira vez de novo.</span
+                  >
+                </blockquote>
+                <figcaption>
+                  nós dois, em cada entrelinha.
+                  <span aria-hidden="true">♡</span>
+                </figcaption>
+              </figure>
+              <div class="memory-side memory-side-right">
+                <span class="eyebrow">para guardar perto</span>
+                <p>
+                  Que a gente continue<br />escolhendo<br /><em
+                    >um ao outro.</em
+                  >
+                </p>
+                <span class="signature">sempre.</span>
+              </div>
+            </div>
+            <p class="memory-after">
+              Tem coisa que não cabe numa página.<br /><em
+                >Mas eu gosto de tentar.</em
+              >
+            </p>
+          </div>
+        </section>
 
-      <footer>
-        <div>
-          <p>Feito com carinho, alguns códigos</p>
-          <strong>e um coração todinho seu.</strong>
-        </div>
-        <a href="#inicio" aria-label="Voltar ao início">V <span>♥</span></a>
-      </footer>
-    </main>
+        <section
+          id="motivos"
+          class="reasons paper-section"
+          aria-labelledby="reasons-title"
+        >
+          <div class="wrap">
+            <div class="chapter-heading">
+              <p class="eyebrow">03 / só para deixar registrado</p>
+              <span class="chapter-note">uma lista que nunca termina.</span>
+            </div>
+            <div class="reasons-heading">
+              <h2 id="reasons-title">
+                Tantas coisas.<br /><em>Todas em você.</em>
+              </h2>
+              <p>
+                Algumas das infinitas coisas que eu amo em você.<br /><span
+                  >Toque em um cartão. Tem mais um pouquinho.</span
+                >
+              </p>
+            </div>
+            <div
+              class="reason-track"
+              id="reason-track"
+              role="group"
+              aria-label="Seis coisas que amo em você"
+            >
+              <details class="reason-card">
+                <summary class="reason-summary">
+                  <span class="card-top"
+                    ><span class="eyebrow">01 / 06</span
+                    ><span class="card-heart" aria-hidden="true"></span></span
+                  ><span class="reason-name">Seu sorriso</span
+                  ><span class="reason-copy"
+                    >Porque ele tem esse jeitinho de transformar qualquer dia
+                    comum em um dia especial.</span
+                  ><span class="card-prompt"
+                    >tem mais aqui <span aria-hidden="true">↗</span></span
+                  >
+                </summary>
+                <p class="reason-extra">
+                  E provavelmente você nem percebe o efeito que ele tem em mim.
+                </p>
+              </details>
+              <details class="reason-card">
+                <summary class="reason-summary">
+                  <span class="card-top"
+                    ><span class="eyebrow">02 / 06</span
+                    ><span class="card-heart" aria-hidden="true"></span></span
+                  ><span class="reason-name">Seu jeito</span
+                  ><span class="reason-copy"
+                    >Porque ser você é o que faz tudo ao seu redor ficar mais
+                    bonito, leve e cheio de vida.</span
+                  ><span class="card-prompt"
+                    >tem mais aqui <span aria-hidden="true">↗</span></span
+                  >
+                </summary>
+                <p class="reason-extra">
+                  Eu não mudaria esse jeitinho por nada. É nele que eu encontro
+                  você.
+                </p>
+              </details>
+              <details class="reason-card">
+                <summary class="reason-summary">
+                  <span class="card-top"
+                    ><span class="eyebrow">03 / 06</span
+                    ><span class="card-heart" aria-hidden="true"></span></span
+                  ><span class="reason-name">A nossa história</span
+                  ><span class="reason-copy"
+                    >Porque cada momento ao seu lado é uma lembrança que eu
+                    quero guardar para sempre.</span
+                  ><span class="card-prompt"
+                    >tem mais aqui <span aria-hidden="true">↗</span></span
+                  >
+                </summary>
+                <p class="reason-extra">
+                  E pensar que ainda tem tanta coisa bonita para a gente
+                  escrever.
+                </p>
+              </details>
+              <details class="reason-card">
+                <summary class="reason-summary">
+                  <span class="card-top"
+                    ><span class="eyebrow">04 / 06</span
+                    ><span class="card-heart" aria-hidden="true"></span></span
+                  ><span class="reason-name">Ter você perto</span
+                  ><span class="reason-copy"
+                    >Porque, ao seu lado, meu coração encontra um lugar para
+                    ficar.</span
+                  ><span class="card-prompt"
+                    >tem mais aqui <span aria-hidden="true">↗</span></span
+                  >
+                </summary>
+                <p class="reason-extra">
+                  No meio de tanta coisa, você continua sendo o meu lugar
+                  favorito.
+                </p>
+              </details>
+              <details class="reason-card">
+                <summary class="reason-summary">
+                  <span class="card-top"
+                    ><span class="eyebrow">05 / 06</span
+                    ><span class="card-heart" aria-hidden="true"></span></span
+                  ><span class="reason-name">Escolher nós dois</span
+                  ><span class="reason-copy"
+                    >Porque eu quero continuar escolhendo você nos dias fáceis e
+                    nos difíceis.</span
+                  ><span class="card-prompt"
+                    >tem mais aqui <span aria-hidden="true">↗</span></span
+                  >
+                </summary>
+                <p class="reason-extra">
+                  O amor também mora nisso: querer ficar, cuidar e continuar.
+                </p>
+              </details>
+              <details class="reason-card">
+                <summary class="reason-summary">
+                  <span class="card-top"
+                    ><span class="eyebrow">06 / 06</span
+                    ><span class="card-heart" aria-hidden="true"></span></span
+                  ><span class="reason-name">O que vem depois</span
+                  ><span class="reason-copy"
+                    >Porque pensar nos dias que ainda vamos viver fica mais
+                    bonito com você.</span
+                  ><span class="card-prompt"
+                    >tem mais aqui <span aria-hidden="true">↗</span></span
+                  >
+                </summary>
+                <p class="reason-extra">
+                  Não preciso conhecer cada amanhã para querer você em todos
+                  eles.
+                </p>
+              </details>
+            </div>
+            <div class="reason-controls" id="reason-controls" hidden>
+              <span id="reason-position" role="status" aria-live="polite"
+                >1 de 6</span
+              >
+              <div>
+                <button
+                  id="reason-prev"
+                  class="circle-button"
+                  type="button"
+                  aria-label="Cartão anterior"
+                  aria-controls="reason-track"
+                >
+                  ←</button
+                ><button
+                  id="reason-next"
+                  class="circle-button"
+                  type="button"
+                  aria-label="Próximo cartão"
+                  aria-controls="reason-track"
+                >
+                  →
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <aside class="surprise-section" aria-label="Uma pequena surpresa">
+          <span class="eyebrow">ps.: antes de continuar…</span>
+          <details id="surprise">
+            <summary>
+              Posso te contar uma coisa? <span aria-hidden="true">↗</span>
+            </summary>
+            <p>
+              No meio de todas as palavras que eu poderia escolher,<br /><em
+                >eu escolheria você.</em
+              >
+            </p>
+          </details>
+        </aside>
+
+        <section
+          id="cartinha"
+          class="letter-section paper-section"
+          aria-labelledby="letter-title"
+          tabindex="-1"
+        >
+          <div class="wrap letter-layout">
+            <div class="letter-intro">
+              <p class="eyebrow">04 / de coração para coração</p>
+              <h2 id="letter-title">
+                Tem um pouco<br />de mim <em>aqui dentro.</em>
+              </h2>
+              <p>
+                Uma cartinha para você.<br />Ela é simples, mas é inteiramente
+                sua.
+              </p>
+              <span class="letter-aside">leia quando quiser sorrir.</span
+              ><svg
+                class="drawn-arrow"
+                viewBox="0 0 140 75"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path
+                  d="M4 8C57 62 104 6 124 51M108 44L127 57L132 34"
+                  stroke="currentColor"
+                  stroke-width="1.4"
+                />
+              </svg>
+            </div>
+            <div class="envelope-area">
+              <div id="envelope-wrap" class="envelope-wrap" aria-hidden="true">
+                <div class="envelope-back"></div>
+                <div class="envelope-letter">
+                  <span class="eyebrow">Para Vitória, hoje e sempre.</span
+                  ><span>Meu amor,</span><i></i><i></i><i></i>
+                </div>
+                <div class="envelope-front"></div>
+                <div class="envelope-flap"></div>
+                <div class="seal"><span>V</span><small>♥</small></div>
+                <span class="envelope-address"
+                  >para: meu amor<br />de: PMR</span
+                >
+              </div>
+              <button
+                id="letter-button"
+                class="button primary"
+                type="button"
+                aria-haspopup="dialog"
+                aria-controls="letter-dialog"
+                aria-expanded="false"
+                hidden
+              >
+                Romper o lacre <span aria-hidden="true">♡</span>
+              </button>
+              <p class="envelope-caption">escrita com tudo o que eu sinto.</p>
+            </div>
+            <details id="letter-fallback" class="letter-fallback">
+              <summary>Ler a cartinha</summary>
+              <article id="letter-paper" class="letter-paper">
+                <p class="eyebrow letter-date">Para Vitória, hoje e sempre.</p>
+                <h3 id="letter-salutation" tabindex="-1">Meu amor,</h3>
+                <div class="personal-letter">
+                  <p>
+                    Talvez esta página seja pequena demais para tudo o que você
+                    significa para mim. Ainda assim, eu queria criar um lugar
+                    onde cada detalhe dissesse um pouquinho do que sinto por
+                    você.
+                  </p>
+                  <p>
+                    Obrigado por existir do seu jeito, por dividir a vida comigo
+                    e por fazer meu coração se sentir em casa. Que a gente
+                    continue escolhendo um ao outro — nos dias fáceis, nos
+                    difíceis e em todos os que ainda vamos viver.
+                  </p>
+                  <p class="letter-signature">Com amor, sempre seu. ♥</p>
+                </div>
+                <p class="signature letter-author">PMR</p>
+                <div class="hold-section">
+                  <p class="eyebrow">mais uma coisinha…</p>
+                  <button
+                    id="hold-heart"
+                    class="hold-heart"
+                    type="button"
+                    aria-describedby="heart-instructions"
+                    hidden
+                  >
+                    <span class="hold-icon" aria-hidden="true"
+                      >♡<span>♥</span></span
+                    ><span>segure meu coração</span>
+                  </button>
+                  <p id="heart-instructions" class="heart-instructions" hidden>
+                    Segure por um instante, ou
+                  </p>
+                  <button
+                    id="heart-simple"
+                    class="text-button heart-simple"
+                    type="button"
+                    hidden
+                  >
+                    toque aqui para recebê-lo
+                  </button>
+                  <p
+                    id="heart-answer"
+                    class="heart-answer"
+                    role="status"
+                    hidden
+                  >
+                    ele já era seu mesmo. ♥
+                  </p>
+                  <noscript
+                    ><p class="heart-answer">
+                      ele já era seu mesmo. ♥
+                    </p></noscript
+                  >
+                </div>
+              </article>
+            </details>
+          </div>
+        </section>
+
+        <section class="ending" aria-labelledby="ending-title">
+          <div class="wrap">
+            <p class="eyebrow">se eu pudesse te prometer um lugar…</p>
+            <div class="ending-lines">
+              <p>Hoje.</p>
+              <p><em>Amanhã.</em></p>
+              <p class="ending-long">E em todos os dias<br />depois disso.</p>
+            </div>
+            <div class="always">
+              <span class="ending-line" aria-hidden="true"></span>
+              <h2 id="ending-title">Sempre você.</h2>
+              <button
+                id="final-secret"
+                type="button"
+                aria-label="Um último carinho para você"
+                aria-expanded="false"
+                aria-controls="final-message"
+                hidden
+              >
+                ♡</button
+              ><span class="ending-line" aria-hidden="true"></span>
+            </div>
+            <p id="final-message" class="final-message" role="status" hidden>
+              meu coração é um lugar que sempre vai ter você.
+            </p>
+            <footer class="site-footer">
+              <p>feito por <span>PMR</span>, para <span>Vitória.</span></p>
+              <button id="replay" class="text-button" type="button" hidden>
+                reviver tudo <span aria-hidden="true">↺</span>
+              </button>
+            </footer>
+          </div>
+        </section>
+      </main>
+    </div>
+    <dialog
+      id="letter-dialog"
+      class="letter-dialog"
+      aria-labelledby="letter-salutation"
+    >
+      <div class="dialog-toolbar">
+        <span class="eyebrow">só entre nós</span
+        ><button id="close-letter" class="text-button" type="button">
+          guardar a carta <span aria-hidden="true">×</span>
+        </button>
+      </div>
+      <div class="letter-mount"></div>
+    </dialog>
+    <div id="particles" class="particles" aria-hidden="true"></div>
+    <p id="secret-message" class="secret-message" role="status" hidden>
+      você encontrou um segredo. eu te amo mais do que consegui colocar nesse
+      site.
+    </p>
+    <div class="music-control">
+      <button
+        id="music-toggle"
+        class="text-button"
+        type="button"
+        aria-pressed="false"
+        hidden
+      >
+        <span class="music-label">tocar música</span>
+        <span aria-hidden="true">♫</span></button
+      ><span id="music-status" role="status"></span>
+    </div>
+    <audio id="music" preload="none" loop></audio>
   </body>
 </html>
-

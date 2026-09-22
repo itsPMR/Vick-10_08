@@ -1,0 +1,18 @@
+{
+  "name": "para-vitoria",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Uma experiência de amor em HTML, CSS e JavaScript, por PMR.",
+  "scripts": {
+    "dev": "node scripts/serve.cjs",
+    "check": "node --check site/script.js && node --check scripts/serve.cjs",
+    "test": "node tests/interactions.cjs",
+    "test:layout": "node tests/layout.cjs",
+    "test:resilience": "node tests/resilience.cjs",
+    "test:entrance": "node tests/entrance.cjs"
+  },
+  "devDependencies": {
+    "playwright": "1.63.0",
+    "axe-core": "4.13.0"
+  }
+}
